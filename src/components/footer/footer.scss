@@ -1,0 +1,15 @@
+@import '../../vars';
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  background: $black;
+  color: $white;
+  font-family: $patrick;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}

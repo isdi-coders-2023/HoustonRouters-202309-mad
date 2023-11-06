@@ -1,8 +1,13 @@
-// import { AppRoutes } from '../router/app.routes';
+import { Footer } from '../footer/footer';
+import { Header } from '../header/header';
 
 export function App() {
-  return;
-  // <AppRoutes>
-  return <></>;
-  /* </AppRoutes> */
+  return (
+    <>
+      <Header></Header>
+      <Footer></Footer>
+    </>
+  );
 }
+
+export default App;
