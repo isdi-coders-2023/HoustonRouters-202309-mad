@@ -1,0 +1,57 @@
+@import '../../vars';
+
+header {
+  height: 4rem;
+  background: $black;
+  color: $white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $patrick;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+
+  .logo-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+
+    li {
+      a {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+  .fa-bars {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    .logo-title {
+      h1 {
+        font-size: 1rem;
+      }
+    }
+
+    ul {
+      display: none;
+    }
+
+    .fa-bars {
+      display: block;
+      cursor: pointer;
+    }
+  }
+}
