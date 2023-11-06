@@ -1,4 +1,4 @@
-import './components/details/datail.scss';
+import './components/details/detail.scss';
 import './components/button-back/button.back.scss';
 import { Detail } from './components/details/detail';
 function App() {
