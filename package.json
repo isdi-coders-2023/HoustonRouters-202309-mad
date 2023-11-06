@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "build:ts": "tsc -w",
     "test": "jest",
-    "test:prod": "jest --watchAll --coverage --watchAll=false --passWithNoTests",
+    "test:pro": "jest --watchAll --coverage --watchAll=false --passWithNoTests",
     "test:w": "jest --watchAll --coverage --collectCoverageFrom=src/**/*.{ts,tsx}",
     "test:f": "jest --watchAll --coverage",
     "prepare": "husky install",
