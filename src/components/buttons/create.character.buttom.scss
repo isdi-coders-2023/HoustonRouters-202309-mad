@@ -1,4 +1,13 @@
-.CreateCharacter {
-  width: 266px;
-  height: 41px;
+@media (max-width: 768px) {
+  .CreateCharacter {
+    width: 183px;
+    height: 31px;
+  }
+}
+
+@media (min-width: 769px) {
+  .image404 {
+    width: 266px;
+    height: 41px;
+  }
 }
