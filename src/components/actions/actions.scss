@@ -1,0 +1,9 @@
+@import '../../vars';
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
+  font-family: $patrick;
+}
