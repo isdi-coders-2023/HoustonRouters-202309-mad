@@ -1,8 +1,14 @@
-@media screen {
+@media (max-width: 768px) {
+  .image404 {
+    width: 329px;
+    height: 523px;
+  }
 }
 
-.image404 {
-  width: 576px;
-  height: 385px;
-  flex-shrink: 0;
+@media (min-width: 769px) {
+  .image404 {
+    width: 576px;
+    height: 385px;
+    flex-shrink: 0;
+  }
 }
