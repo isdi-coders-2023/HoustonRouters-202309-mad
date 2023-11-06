@@ -2,26 +2,6 @@
   box-sizing: border-box;
 }
 
-.button-container {
-  display: flex;
-  justify-content: right;
-  margin-right: 8%;
-  padding-top: 1rem;
-}
-
-.button-back {
-  width: 105px;
-  height: 41px;
-  border-radius: 10px;
-  background-color: #000;
-  color: #fff;
-  font-family: Patrick Hand;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px; /* 112.5% */
-}
-
 .details-container {
   width: auto;
   height: 450px;
@@ -30,7 +10,6 @@
   margin-left: auto;
   margin-right: 0%;
   padding-top: 4rem;
-
   border-radius: 10px;
 }
 
@@ -44,4 +23,19 @@
   border-radius: 10px;
   margin-left: 5%;
   margin-right: 5%;
+}
+
+@media (max-width: 450px) {
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-right: 7%;
+    margin-left: 3%;
+    width: auto;
+  }
+
+  .details-container-items {
+    padding-left: 1rem;
+  }
 }
