@@ -1,3 +1,5 @@
+@import '../../vars';
+
 * {
   box-sizing: border-box;
 }
@@ -11,10 +13,17 @@
   margin-right: 0%;
   padding-top: 4rem;
   border-radius: 10px;
+  font-family: $patrick;
+
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+  }
 }
 
 .main-title {
   text-align: center;
+  font-family: $patrick;
 }
 
 .image-details {
@@ -25,7 +34,7 @@
   margin-right: 5%;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .details-container {
     display: flex;
     flex-direction: column;
@@ -37,5 +46,16 @@
 
   .details-container-items {
     padding-left: 1rem;
+    margin-bottom: 1rem;
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  .image-details {
+    width: 180px;
+    height: 180px;
   }
 }
