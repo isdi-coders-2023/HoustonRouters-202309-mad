@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './header.scss';
 
 export function Header() {
@@ -9,10 +10,10 @@ export function Header() {
       </div>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#">My universe</a>
+          <Link to="/my-universe">My universe</Link>
         </li>
       </ul>
       <i className="fa-solid fa-bars"></i>
