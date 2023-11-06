@@ -1,9 +1,7 @@
 export function ButtonBack() {
   return (
     <div className="button-container">
-      <button className="button-back" role="button">
-        Back
-      </button>
+      <button className="button-back">Back</button>
     </div>
   );
 }
