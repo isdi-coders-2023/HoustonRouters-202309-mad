@@ -1,6 +1,6 @@
 import './components/details/datail.scss';
 import './components/button-back/button.back.scss';
-import { Detail } from './components/details/datail';
+import { Detail } from './components/details/detail';
 function App() {
   return (
     <>

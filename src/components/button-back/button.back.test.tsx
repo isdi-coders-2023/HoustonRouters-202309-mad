@@ -1,15 +1,15 @@
 import { screen, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { Detail } from './detail';
+import { ButtonBack } from './button.back';
 
-describe('Given Details component', () => {
+describe('Given ButtonBack component', () => {
   describe('When we instantiate', () => {
     beforeEach(() => {
-      render(<Detail></Detail>);
+      render(<ButtonBack></ButtonBack>);
     });
 
     test('Then it should be in the document', () => {
-      const element = screen.getByText(/Details/i);
+      const element = screen.getByRole('button');
       expect(element).toBeInTheDocument();
     });
   });
