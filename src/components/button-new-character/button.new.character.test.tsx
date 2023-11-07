@@ -1,8 +1,8 @@
 import { screen, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { ButtonNewCharacter } from '../button-new-character/button.new.character';
+import { ButtonNewCharacter } from './button.new.character';
 
-describe('Given ButtonNewCharacter component', () => {
+describe('Given ButtonBack component', () => {
   describe('When we instantiate', () => {
     beforeEach(() => {
       render(<ButtonNewCharacter></ButtonNewCharacter>);
