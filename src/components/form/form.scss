@@ -1,113 +1,132 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-.form-section{
+@import '../../vars';
+
+.form-section {
   display: flex;
   flex-direction: column;
+
+  .form-title {
+    font-family: $patrick;
+    text-align: center;
+  }
 }
-.new-character{
+.new-character {
   display: none;
 }
-.edit-character{
+.edit-character {
   font-size: x-large;
   margin: auto;
-  margin-top: 10rem;
 }
-.form{
-  width: 400px;
-  background-color: #d9d9d9;
-  border-radius: 10%;
+.form {
+  font-family: $patrick;
+  max-width: 500px;
+  background-color: $gray;
+  border-radius: 1rem;
   margin: auto;
-  margin-top: 3rem;
-  padding: 2rem;
-  box-sizing: border-box 580 300;
+  margin-top: 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-content: center;
-  flex-wrap: wrap;
-  .name-form{
+
+  .name-form {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     margin-bottom: 1rem;
     flex-wrap: wrap;
     gap: 1rem;
-    input{
+    input {
       border-radius: 1rem;
       width: 20rem;
     }
   }
-  .alive-form{
+  .alive-form {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 1rem;
+
+    select {
+      border-radius: 1rem;
+    }
   }
-  .species-form{
+  .species-form {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 1rem;
-    input{
+    input {
       border-radius: 1rem;
       width: 20rem;
     }
   }
-  .gender-form{
+  .gender-form {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 1rem;
+
+    select {
+      border-radius: 1rem;
+    }
   }
-  .origen-form{
+  .origen-form {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 1rem;
-    input{
+    input {
       border-radius: 1rem;
       width: 20rem;
     }
   }
-  .image-form{
+  .image-form {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 1rem;
-    input{
+    input {
       border-radius: 1rem;
       width: 20rem;
     }
   }
-  .location-form{
+  .location-form {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 1rem;
-    input{
+    input {
       border-radius: 1rem;
       width: 14rem;
     }
   }
-  .save-form{
-    gap: 1rem;
-    border-radius: 25%;
+  .save-form {
     display: flex;
     justify-content: flex-end;
+
+    button {
+      width: 105px;
+      height: 41px;
+      border-radius: 10px;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Patrick Hand SC', sans-serif;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+    }
   }
 }

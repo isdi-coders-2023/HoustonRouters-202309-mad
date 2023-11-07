@@ -5,6 +5,7 @@ import { Detail } from '../details/detail';
 const HomePage = lazy(() => import('../pages/home/home'));
 const ErroPage = lazy(() => import('../pages/error-page/error.page'));
 const MyUniversePage = lazy(() => import('../pages/my-universe/my.universe'));
+const AddFormPage = lazy(() => import('../pages/add-form-page/add.form.page'));
 
 export function AppRoutes() {
   return (
@@ -16,10 +17,8 @@ export function AppRoutes() {
           path="/my-universe"
           element={<MyUniversePage></MyUniversePage>}
         ></Route>
-
-        <Route path="/details" element={<Detail></Detail>}>
-          {' '}
-        </Route>
+        <Route path="/add" element={<AddFormPage></AddFormPage>}></Route>
+        <Route path="/details" element={<Detail></Detail>}></Route>
         <Route path="*" element={<ErroPage></ErroPage>}></Route>
       </Routes>
     </Suspense>
