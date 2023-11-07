@@ -22,6 +22,7 @@ export function FormCharacter () {
          <h2 className='new-character'>New Character</h2>
          <div className="counter-form">
             <form action="" name='form' className='form'>
+             
               <div className="name-form">
                 <label htmlFor="name-character">Name: </label>
                 <input
@@ -29,7 +30,7 @@ export function FormCharacter () {
                 name="name"
                 id="name-character"
                // onChange={handleChange}
-                placeholder="Terrestrial Language"
+                placeholder="  Terrestrial Language"
                 required
                 />
               </div>
@@ -49,7 +50,7 @@ export function FormCharacter () {
                 name="species"
                 id="species-character"
                // onChange={handleChange}
-                placeholder="Universal Nomenclature"
+                placeholder="  Universal Nomenclature"
                 required
                 />
               </div>
