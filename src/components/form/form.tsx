@@ -1,34 +1,34 @@
-import { SyntheticEvent, useState } from "react"
+//import { SyntheticEvent, useState } from "react"
 import './form.scss'
 
 export function FormCharacter () {
 
 
-  const [form, setForm] = useState({
-  })
+ // const [form, setForm] = useState({
+ // })
   
-  const handleChange = (ev: SyntheticEvent) => {
-    return setForm(form)
-  }
+ // const handleChange = (ev: SyntheticEvent) => {
+ //   return setForm(form)
+ // }
 
-  const handleSubmit = (ev: SyntheticEvent) => {
-    ev.preventDefault();
-    return setForm(form)
-  }
+ // const handleSubmit = (ev: SyntheticEvent) => {
+ //   ev.preventDefault();
+  //  return setForm(form)
+ // }
 
   return(
-    <section className="form">
-         <h2>Edit Character</h2>
-         <h2>New Character</h2>
+    <section className="form-section">
+         <h2 className='edit-character'>Edit Character</h2>
+         <h2 className='new-character'>New Character</h2>
          <div className="counter-form">
-            <form action="">
+            <form action="" name='form' className='form'>
               <div className="name-form">
                 <label htmlFor="name-character">Name: </label>
                 <input
                 type="text" 
                 name="name"
                 id="name-character"
-                onChange={handleChange}
+               // onChange={handleChange}
                 placeholder="Terrestrial Language"
                 required
                 />
@@ -39,7 +39,7 @@ export function FormCharacter () {
                 type="checkbox" 
                 name="alive"
                 id="alive-character"
-                onChange={handleChange}
+               // onChange={handleChange}
                 />
               </div>
               <div className="species-form">
@@ -48,7 +48,7 @@ export function FormCharacter () {
                 type="text" 
                 name="species"
                 id="species-character"
-                onChange={handleChange}
+               // onChange={handleChange}
                 placeholder="Universal Nomenclature"
                 required
                 />
@@ -69,7 +69,7 @@ export function FormCharacter () {
                 type="text" 
                 name="origen"
                 id="origen-character"
-                onChange={handleChange}
+               // onChange={handleChange}
                 placeholder="If You Know"
                 required
                 />
@@ -80,7 +80,7 @@ export function FormCharacter () {
                 type="text" 
                 name="image"
                 id="image-character"
-                onChange={handleChange}
+                //onChange={handleChange}
                 placeholder="Insert File"
                 required
                 />
@@ -91,12 +91,12 @@ export function FormCharacter () {
                 type="text" 
                 name="lastKnowLocation"
                 id="lastKnowLocation-character"
-                onChange={handleChange}
+               // onChange={handleChange}
                 placeholder="If you Know"
                 />
               </div>
               <div className="save-form">
-                <button onSubmit={handleSubmit}>Save</button>
+                <button>Save</button>
               </div>          
             </form>
         </div>
