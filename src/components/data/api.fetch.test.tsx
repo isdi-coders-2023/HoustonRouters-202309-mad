@@ -1,5 +1,5 @@
-import { ApiCharacters } from "./api.fetch";
-
+import { Character } from '../models/character';
+import { ApiCharacters } from './api.fetch';
 
 describe('Given ApiRepo class', () => {
   describe('When we instantiate it and response is ok', () => {
@@ -11,14 +11,12 @@ describe('Given ApiRepo class', () => {
         json: jsonMock,
       });
     });
-    test('Then metod  GetCharacters shoul be used', ()=>{
+    test('Then metod  GetCharacters shoul be used', async () => {
       const repo = new ApiCharacters();
-      const expected: Characters[] = []
-       const result = await repo.GetCharacters()
-        expect(jsonMock).toHaveBeenCalled();
+      const expected: Character[] = [];
+      const result = await repo.getCharacters();
+      expect(jsonMock).toHaveBeenCalled();
       expect(result).toStrictEqual(expected);
-        });
-      });
     });
   });
 });
