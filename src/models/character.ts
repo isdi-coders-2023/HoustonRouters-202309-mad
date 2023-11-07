@@ -1,3 +1,6 @@
+import { Origin } from './origin';
+import { Location } from './location';
+
 export type Gender = 'Male' | 'Female' | 'Genderless' | 'Unknown';
 export type Status = 'Alive' | 'Dead' | 'Unknown';
 
@@ -21,23 +24,8 @@ export type Info = {
   next: 'string' | null;
   prev: 'string' | null;
 };
-
 //FETCH ALL CHARACTERS
 export type Characters = {
   info: Info;
   results: Character[];
-};
-
-export type Location = {
-  id: number;
-  name: string;
-  type: string;
-  dimension: string;
-  residents: string[];
-  url: string;
-  created: string;
-};
-export type Origin = {
-  name: string;
-  url: string;
 };
