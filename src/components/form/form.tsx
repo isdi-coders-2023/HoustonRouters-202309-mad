@@ -4,23 +4,23 @@ import './form.scss'
 export function FormCharacter () {
 
 
- // const [form, setForm] = useState({
- // })
+  // const [form, setForm] = useState({
+  // })
   
- // const handleChange = (ev: SyntheticEvent) => {
- //   return setForm(form)
- // }
+  // const handleChange = (ev: SyntheticEvent) => {
+  //   return setForm(form)
+  // }
 
- // const handleSubmit = (ev: SyntheticEvent) => {
- //   ev.preventDefault();
-  //  return setForm(form)
- // }
+  // const handleSubmit = (ev: SyntheticEvent) => {
+  //   ev.preventDefault();
+      //  return setForm(form)
+  // }
 
   return(
     <section className="form-section">
-         <h2 className='edit-character'>Edit Character</h2>
-         <h2 className='new-character'>New Character</h2>
-         <div className="counter-form">
+        <h2 className='edit-character'>Edit Character</h2>
+        <h2 className='new-character'>New Character</h2>
+        <div className="counter-form">
             <form action="" name='form' className='form'>
              
               <div className="name-form">
@@ -29,19 +29,19 @@ export function FormCharacter () {
                 type="text" 
                 name="name"
                 id="name-character"
-               // onChange={handleChange}
+              // onChange={handleChange}
                 placeholder="  Terrestrial Language"
                 required
                 />
               </div>
               <div className="alive-form">
-                <label htmlFor="alive-character">Alive: </label>
-                <input
-                type="checkbox" 
-                name="alive"
-                id="alive-character"
-               // onChange={handleChange}
-                />
+              <label htmlFor="alive-character">Status: </label>
+                <select name="is-alive" id="alive-character">Status
+                <option value="select-status" disabled>Select Status</option>
+                  <option value="alive">Alive</option>
+                  <option value="dead">Dead</option>
+                  <option value="unknow">Unknow</option>
+                </select>
               </div>
               <div className="species-form">
                 <label htmlFor="species-character">Species: </label>
@@ -49,7 +49,7 @@ export function FormCharacter () {
                 type="text" 
                 name="species"
                 id="species-character"
-               // onChange={handleChange}
+              // onChange={handleChange}
                 placeholder="  Universal Nomenclature"
                 required
                 />
@@ -70,8 +70,8 @@ export function FormCharacter () {
                 type="text" 
                 name="origen"
                 id="origen-character"
-               // onChange={handleChange}
-                placeholder="If You Know"
+              // onChange={handleChange}
+                placeholder="  If You Know"
                 required
                 />
               </div>
@@ -82,7 +82,7 @@ export function FormCharacter () {
                 name="image"
                 id="image-character"
                 //onChange={handleChange}
-                placeholder="Insert File"
+                placeholder="  Url File"
                 required
                 />
               </div>
@@ -92,12 +92,12 @@ export function FormCharacter () {
                 type="text" 
                 name="lastKnowLocation"
                 id="lastKnowLocation-character"
-               // onChange={handleChange}
-                placeholder="If you Know"
+              // onChange={handleChange}
+                placeholder="  If you Know"
                 />
               </div>
               <div className="save-form">
-                <button>Save</button>
+                <button> Save </button>
               </div>          
             </form>
         </div>
