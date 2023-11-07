@@ -4,7 +4,7 @@ import './actions.scss';
 
 export function Actions() {
   return (
-    <section className="actions" role="generic">
+    <section className="actions">
       <ActionFilterStatus></ActionFilterStatus>
       <ActionFilterGender></ActionFilterGender>
     </section>
