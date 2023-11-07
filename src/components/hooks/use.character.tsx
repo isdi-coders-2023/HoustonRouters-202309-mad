@@ -17,7 +17,8 @@ export function useCharacter() {
     try {
       // Asíncrona
       const loadedRepo = await repo.getCharacters();
-      const loadedCharacters = loadedRepo;
+      const loadedCharacters = loadedRepo.results;
+      console.log(loadedCharacters);
 
       // Síncrono
       dispatch(loadActionCreator(loadedCharacters));

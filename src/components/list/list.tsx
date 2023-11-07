@@ -12,6 +12,7 @@ export function List() {
     loadCharacters();
   }, [loadCharacters]);
 
+  console.log(Characters);
   return (
     <section className="list">
       <ul>

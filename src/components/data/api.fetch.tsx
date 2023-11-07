@@ -1,9 +1,6 @@
-import { Character } from '../models/character';
+import { Characters } from '../models/character';
 
 export class ApiCharacters {
-  getAll() {
-    throw new Error('Method not implemented.');
-  }
   apiUrl: string;
   page: number;
   characterUrl: string;
@@ -11,10 +8,11 @@ export class ApiCharacters {
     this.apiUrl = 'https://rickandmortyapi.com/api/character/?page=';
     this.page = page;
     this.characterUrl = this.apiUrl + this.page;
+    console.log(this.characterUrl);
   }
 
-  async getCharacters(): Promise<Character[]> {
-    const response = await fetch(this.apiUrl);
+  async getCharacters(): Promise<Characters> {
+    const response = await fetch(this.characterUrl);
     if (!response.ok)
       throw new Error(response.status + ' ' + response.statusText);
     return response.json();
