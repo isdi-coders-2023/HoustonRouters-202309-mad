@@ -1,0 +1,61 @@
+@import '../../vars';
+
+* {
+  box-sizing: border-box;
+}
+
+.details-container {
+  width: auto;
+  height: 450px;
+  background-color: #d9d9d9;
+  display: flex;
+  margin-left: auto;
+  margin-right: 0%;
+  padding-top: 4rem;
+  border-radius: 10px;
+  font-family: $patrick;
+
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+.main-title {
+  text-align: center;
+  font-family: $patrick;
+}
+
+.image-details {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+@media (max-width: 500px) {
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-right: 7%;
+    margin-left: 3%;
+    width: auto;
+  }
+
+  .details-container-items {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  .image-details {
+    width: 180px;
+    height: 180px;
+  }
+}

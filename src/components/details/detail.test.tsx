@@ -1,20 +1,15 @@
 import { screen, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { MemoryRouter as Router } from 'react-router-dom';
-import { Header } from './header';
+import { Detail } from './detail';
 
-describe('Given Header component', () => {
+describe('Given Details component', () => {
   describe('When we instantiate', () => {
     beforeEach(() => {
-      render(
-        <Router>
-          <Header></Header>
-        </Router>
-      );
+      render(<Detail></Detail>);
     });
 
     test('Then it should be in the document', () => {
-      const element = screen.getByRole('heading');
+      const element = screen.getByText(/Details/i);
       expect(element).toBeInTheDocument();
     });
   });
