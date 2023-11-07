@@ -1,20 +1,15 @@
 import { screen, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { MemoryRouter as Router } from 'react-router-dom';
-import { Header } from './header';
+import { Card } from './card';
 
-describe('Given Header component', () => {
+describe('Given Card component', () => {
   describe('When we instantiate', () => {
     beforeEach(() => {
-      render(
-        <Router>
-          <Header></Header>
-        </Router>
-      );
+      render(<Card></Card>);
     });
 
     test('Then it should be in the document', () => {
-      const element = screen.getByRole('heading');
+      const element = screen.getByRole('img');
       expect(element).toBeInTheDocument();
     });
   });
