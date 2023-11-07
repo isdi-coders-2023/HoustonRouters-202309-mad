@@ -1,5 +1,4 @@
 import { Card } from '../card/card';
-import { ApiCharacters } from '../data/api.fetch';
 import './list.scss';
 
 export function List() {
