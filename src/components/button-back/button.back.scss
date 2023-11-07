@@ -1,0 +1,21 @@
+@import '../../vars';
+
+.button-container {
+  display: flex;
+  justify-content: right;
+  margin-right: 8%;
+  padding-top: 1rem;
+}
+
+.button-back {
+  width: 105px;
+  height: 41px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+  font-family: $patrick;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
