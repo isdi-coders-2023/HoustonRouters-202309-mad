@@ -1,4 +1,5 @@
 import { ButtonBack } from '../button-back/button.back';
+import './detail.scss';
 
 export function Detail() {
   return (
