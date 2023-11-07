@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { Detail } from '../details/detail';
 
 const HomePage = lazy(() => import('../pages/home/home'));
 const ErroPage = lazy(() => import('../pages/error-page/error.page'));
@@ -17,7 +18,7 @@ export function AppRoutes() {
           element={<MyUniversePage></MyUniversePage>}
         ></Route>
         <Route path="/add" element={<AddFormPage></AddFormPage>}></Route>
-
+        <Route path="/details" element={<Detail></Detail>}></Route>
         <Route path="*" element={<ErroPage></ErroPage>}></Route>
       </Routes>
     </Suspense>
