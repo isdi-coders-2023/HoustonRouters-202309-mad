@@ -5,7 +5,32 @@ export function List() {
   return (
     <section className="list">
       <ul>
-        <Card></Card>
+        <Card
+          character={{
+            id: 0,
+            name: '',
+            status: 'Alive',
+            species: '',
+            gender: 'Unknown',
+            origin: {
+              name: '',
+              url: '',
+            },
+            location: {
+              id: 0,
+              name: '',
+              type: '',
+              dimension: '',
+              residents: [],
+              url: '',
+              created: '',
+            },
+            image: '',
+            episode: [],
+            url: '',
+            created: '',
+          }}
+        ></Card>
       </ul>
     </section>
   );
