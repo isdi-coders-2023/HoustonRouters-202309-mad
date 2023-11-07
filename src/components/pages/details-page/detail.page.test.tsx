@@ -16,7 +16,7 @@ describe('Given DetailPage component', () => {
         </>
       );
     });
-    test('renders Detail with Footer', () => {
+    test('renders Detail-page with Detail component', () => {
       expect(Detail).toHaveBeenCalled();
     });
   });
