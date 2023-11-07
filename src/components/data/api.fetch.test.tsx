@@ -12,7 +12,7 @@ describe('Given ApiRepo class', () => {
       });
     });
     test('Then metod  GetCharacters shoul be used', async () => {
-      const repo = new ApiCharacters();
+      const repo = new ApiCharacters(1);
       const expected: Character[] = [];
       const result = await repo.getCharacters();
       expect(jsonMock).toHaveBeenCalled();

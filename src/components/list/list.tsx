@@ -1,37 +1,24 @@
-// import { Card } from '../card/card';
-// import './list.scss';
+import { useContext, useEffect } from 'react';
+import { Card } from '../card/card';
+import './list.scss';
+import { AppContext } from '../context/app.contest';
 
-// export function List() {
-//   return (
-//     <section className="list">
-//       <ul>
-//         <Card
-//           character={{
-//             id: 0,
-//             name: '',
-//             status: 'Alive',
-//             species: '',
-//             gender: 'Unknown',
-//             origin: {
-//               name: '',
-//               url: '',
-//             },
-//             location: {
-//               id: 0,
-//               name: '',
-//               type: '',
-//               dimension: '',
-//               residents: [],
-//               url: '',
-//               created: '',
-//             },
-//             image: '',
-//             episode: [],
-//             url: '',
-//             created: '',
-//           }}
-//         ></Card>
-//       </ul>
-//     </section>
-//   );
-// }
+export function List() {
+  const {
+    characterTools: { Characters, loadCharacters },
+  } = useContext(AppContext);
+
+  useEffect(() => {
+    loadCharacters();
+  }, [loadCharacters]);
+
+  return (
+    <section className="list">
+      <ul>
+        {Characters.map((item) => (
+          <Card key={item.id} character={item}></Card>
+        ))}
+      </ul>
+    </section>
+  );
+}
