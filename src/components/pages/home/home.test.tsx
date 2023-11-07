@@ -9,11 +9,9 @@ describe('Given HomePage component', () => {
   describe('When we instantiate', () => {
     beforeEach(() => {
       render(
-        <>
-          <Router>
-            <HomePage></HomePage>
-          </Router>
-        </>
+        <Router>
+          <HomePage></HomePage>
+        </Router>
       );
     });
     test('renders Display in page', () => {

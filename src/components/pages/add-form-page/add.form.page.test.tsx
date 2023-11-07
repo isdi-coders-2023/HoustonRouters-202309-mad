@@ -9,11 +9,9 @@ describe('Given AddFormPage component', () => {
   describe('When we instantiate', () => {
     beforeEach(() => {
       render(
-        <>
-          <Router>
-            <AddFormPage></AddFormPage>
-          </Router>
-        </>
+        <Router>
+          <AddFormPage></AddFormPage>
+        </Router>
       );
     });
     test('renders AddFormPage in page', () => {
