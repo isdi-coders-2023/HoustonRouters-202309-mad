@@ -1,20 +1,15 @@
 import { screen, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { MemoryRouter as Router } from 'react-router-dom';
-import { Header } from './header';
+import { ActionFilterGender } from './action.filter.gender';
 
-describe('Given Header component', () => {
+describe('Given ActionFilterStatus component', () => {
   describe('When we instantiate', () => {
     beforeEach(() => {
-      render(
-        <Router>
-          <Header></Header>
-        </Router>
-      );
+      render(<ActionFilterGender></ActionFilterGender>);
     });
 
     test('Then it should be in the document', () => {
-      const element = screen.getByRole('heading');
+      const element = screen.getByRole('combobox');
       expect(element).toBeInTheDocument();
     });
   });

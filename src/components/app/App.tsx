@@ -1,13 +1,12 @@
-import { ButtonNewCharacter } from '../button-new-character/button.new.character';
-import { Display } from '../display/display';
 import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
+import { AppRoutes } from '../router/app.routes';
 
 export function App() {
   return (
     <>
       <Header></Header>
-      <Display></Display>
+      <AppRoutes></AppRoutes>
       <Footer></Footer>
       <ButtonNewCharacter></ButtonNewCharacter>
     </>

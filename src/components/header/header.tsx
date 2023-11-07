@@ -1,4 +1,5 @@
 import './header.scss';
+import { Nav } from '../nav/nav';
 
 export function Header() {
   return (
@@ -7,15 +8,7 @@ export function Header() {
         <img src="/img/logo.png"></img>
         <h1>Rick & Morty</h1>
       </div>
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">My universe</a>
-        </li>
-      </ul>
-      <i className="fa-solid fa-bars"></i>
+      <Nav></Nav>
     </header>
   );
 }
