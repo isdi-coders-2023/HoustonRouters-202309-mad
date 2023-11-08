@@ -1,4 +1,4 @@
-import { Characters } from '../models/character';
+import { Characters } from '../../models/character';
 
 export class ApiCharacters {
   apiUrl: string;

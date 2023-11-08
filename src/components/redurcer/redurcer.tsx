@@ -1,4 +1,4 @@
-import { Character } from '../models/character';
+import { Character } from '../../models/character';
 import { ActionCharacter } from './actions';
 
 export function characterReducer(

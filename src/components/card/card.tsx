@@ -1,6 +1,6 @@
 import { ButtonDetails } from '../button-details/button.details';
 import './card.scss';
-import { Character } from '../models/character';
+import { Character } from '../../models/character';
 
 type CharacterProp = {
   character: Character;
