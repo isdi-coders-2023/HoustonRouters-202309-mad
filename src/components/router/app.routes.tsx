@@ -18,7 +18,7 @@ export function AppRoutes() {
           element={<MyUniversePage></MyUniversePage>}
         ></Route>
         <Route path="/add" element={<AddFormPage></AddFormPage>}></Route>
-        <Route path="/details" element={<DetailPage></DetailPage>}></Route>
+        <Route path="/details/:id" element={<DetailPage></DetailPage>}></Route>
         <Route path="*" element={<ErroPage></ErroPage>}></Route>
       </Routes>
     </Suspense>

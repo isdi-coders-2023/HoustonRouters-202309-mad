@@ -1,8 +1,13 @@
+import { Link } from 'react-router-dom';
 import './button.details.scss';
-export function ButtonDetails() {
+
+type Props = {
+  idCharacter: string;
+};
+export function ButtonDetails({ idCharacter }: Props) {
   return (
-    <button className="button-details">
+    <Link to={`/details/${idCharacter}`} className="button-details">
       <i className="fa-solid fa-eye"></i> Details
-    </button>
+    </Link>
   );
 }

@@ -5,7 +5,7 @@ export type Gender = 'Male' | 'Female' | 'Genderless' | 'Unknown';
 export type Status = 'Alive' | 'Dead' | 'Unknown';
 
 export type Character = {
-  id: number;
+  id: string;
   name: string;
   status: Status;
   species: string;
