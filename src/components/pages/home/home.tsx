@@ -8,6 +8,7 @@ export default function HomePage() {
       <Display></Display>
       <List></List>
       <Actions></Actions>
+      <List></List>
     </>
   );
 }

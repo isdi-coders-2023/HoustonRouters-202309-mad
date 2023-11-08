@@ -1,11 +1,11 @@
 import { screen, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { ButtonNewCharacter } from '../button-new-character/button.new.character';
+import { ButtonBack } from './button.back';
 
 describe('Given ButtonNewCharacter component', () => {
   describe('When we instantiate', () => {
     beforeEach(() => {
-      render(<ButtonNewCharacter></ButtonNewCharacter>);
+      render(<ButtonBack></ButtonBack>);
     });
 
     test('Then it should be in the document', () => {
