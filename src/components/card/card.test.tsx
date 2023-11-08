@@ -8,7 +8,7 @@ describe('Given Card component', () => {
       render(
         <Card
           character={{
-            id: 0,
+            id: '0',
             name: '',
             status: 'Alive',
             species: '',
@@ -18,7 +18,7 @@ describe('Given Card component', () => {
               url: '',
             },
             location: {
-              id: 0,
+              id: '0',
               name: '',
               type: '',
               dimension: '',

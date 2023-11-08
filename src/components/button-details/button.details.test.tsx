@@ -5,7 +5,7 @@ import { ButtonDetails } from './button.details';
 describe('Given ButtonDetails component', () => {
   describe('When we instantiate', () => {
     beforeEach(() => {
-      render(<ButtonDetails></ButtonDetails>);
+      render(<ButtonDetails idCharacter={''}></ButtonDetails>);
     });
 
     test('Then it should be in the document', () => {
