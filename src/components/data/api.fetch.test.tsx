@@ -1,4 +1,4 @@
-import { Character } from '../models/character';
+import { Character } from '../../models/character';
 import { ApiCharacters } from './api.fetch';
 
 describe('Given ApiRepo class', () => {
