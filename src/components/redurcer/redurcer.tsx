@@ -1,15 +1,20 @@
-import { Character } from '../models/character';
+import { Character, Info } from '../../models/character';
 import { ActionCharacter } from './actions';
 
+export type AppState = {
+  info: Info;
+  charecters: Character[];
+};
+
 export function characterReducer(
-  state: Character[],
+  state: AppState,
   { type, payload }: ActionCharacter
-): Character[] {
+): AppState {
   switch (type) {
     case 'load':
-      return payload;
+      return { ...state, charecters: payload.characters, info: payload.info };
 
     default:
-      return [...state];
+      return { ...state };
   }
 }

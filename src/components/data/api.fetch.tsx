@@ -1,18 +1,13 @@
-import { Characters } from '../models/character';
+import { ApiResponse } from '../../models/character';
 
 export class ApiCharacters {
   apiUrl: string;
-  page: number;
-  characterUrl: string;
-  constructor(page: number) {
-    this.apiUrl = 'https://rickandmortyapi.com/api/character/?page=';
-    this.page = page;
-    this.characterUrl = this.apiUrl + this.page;
-    console.log(this.characterUrl);
+  constructor() {
+    this.apiUrl = 'https://rickandmortyapi.com/api/character/';
   }
 
-  async getCharacters(): Promise<Characters> {
-    const response = await fetch(this.characterUrl);
+  async getCharacters(url = this.apiUrl): Promise<ApiResponse> {
+    const response = await fetch(url);
     if (!response.ok)
       throw new Error(response.status + ' ' + response.statusText);
     return response.json();
