@@ -16,7 +16,7 @@ export function List() {
   return (
     <section className="list">
       <ul>
-        {appState.charecters.map((item) => (
+        {appState.results.map((item) => (
           <Card key={item.id} character={item}></Card>
         ))}
       </ul>

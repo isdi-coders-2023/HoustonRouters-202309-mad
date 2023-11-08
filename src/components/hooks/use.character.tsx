@@ -7,7 +7,7 @@ import { Info } from '../../models/character';
 export function useCharacter() {
   const initialState: AppState = {
     info: {} as Info,
-    charecters: [],
+    results: [],
   };
 
   const [appState, dispatch] = useReducer(characterReducer, initialState);
@@ -17,7 +17,7 @@ export function useCharacter() {
     try {
       // Asíncrona
       const loadedRepo = await repo.getCharacters();
-      console.log(loadedRepo.characters);
+      console.log(loadedRepo.results);
 
       // Síncrono
       dispatch(loadActionCreator(loadedRepo));

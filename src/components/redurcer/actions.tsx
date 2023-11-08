@@ -1,4 +1,4 @@
-import { ApiResponse, Character, Info } from '../../models/character';
+import { ApiResponse, Info } from '../../models/character';
 
 export type ActionNotesTypes =
   | 'load'
