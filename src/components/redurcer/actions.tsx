@@ -1,4 +1,4 @@
-import { ApiResponse, Character, Info } from '../../models/character';
+import { ApiResponse } from '../../models/character';
 
 export type ActionNotesTypes =
   | 'load'
@@ -13,19 +13,9 @@ type ActionCharacterAll = {
   payload: ApiResponse;
 };
 
-type ActionNextPage = {
-  type: 'pageNext';
-  payload: Info;
-};
-
-export type ActionCharacter = ActionCharacterAll | ActionNextPage;
+export type ActionCharacter = ActionCharacterAll;
 
 export const loadActionCreator = (payload: ApiResponse): ActionCharacter => ({
   type: 'load',
-  payload,
-});
-
-export const nextPageActions = (payload: Info): ActionNextPage => ({
-  type: 'pageNext',
   payload,
 });

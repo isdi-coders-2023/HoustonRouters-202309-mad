@@ -8,6 +8,7 @@ export class ApiCharacters {
 
   async getCharacters(url = this.apiUrl): Promise<ApiResponse> {
     const response = await fetch(url);
+
     if (!response.ok)
       throw new Error(response.status + ' ' + response.statusText);
     return response.json();

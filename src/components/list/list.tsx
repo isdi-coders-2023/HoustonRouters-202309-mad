@@ -12,11 +12,10 @@ export function List() {
     loadCharacters();
   }, [loadCharacters]);
 
-  console.log(appState);
   return (
     <section className="list">
       <ul>
-        {appState.charecters.map((item) => (
+        {appState.characters.map((item) => (
           <Card key={item.id} character={item}></Card>
         ))}
       </ul>

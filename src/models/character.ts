@@ -27,5 +27,5 @@ export type Info = {
 //FETCH ALL CHARACTERS
 export type ApiResponse = {
   info: Info;
-  characters: Character[];
+  results: Character[];
 };
