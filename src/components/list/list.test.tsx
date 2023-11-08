@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom';
 import { List } from './list';
-import { render } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { AppContext, ContextStructure } from '../context/app.contest';
 import { Character } from '../../models/character';
 
@@ -22,6 +23,13 @@ describe('given the List component', () => {
         </AppContext.Provider>
       );
     });
-    test('is should have cards in him');
+    test('renders List with Card', () => {});
+    const element = screen.getByRole('List');
+    expect(element).toBeInTheDocument();
+  });
+  test('', () => {
+    expect(mockContext.characterTools.loadCharacters).toHaveBeenCalled();
+    const element = screen.getByText('Rick');
+    expect(element).toBeInTheDocument();
   });
 });

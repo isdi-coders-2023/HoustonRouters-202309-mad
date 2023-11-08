@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { App } from './App';
+import { App } from './app';
 import { Footer } from '../footer/footer';
 import { MemoryRouter as Router } from 'react-router-dom';
 
