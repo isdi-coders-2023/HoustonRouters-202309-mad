@@ -7,12 +7,9 @@ export function List() {
   const {
     characterTools: { Characters, loadCharacters },
   } = useContext(AppContext);
-
   useEffect(() => {
     loadCharacters();
   }, [loadCharacters]);
-
-  console.log(Characters);
   return (
     <section className="list">
       <ul>
