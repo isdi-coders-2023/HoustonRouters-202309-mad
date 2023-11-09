@@ -37,7 +37,7 @@ export function FormCharacter() {
             <label htmlFor="alive-character">Status: </label>
             <select name="is-alive" id="alive-character">
               Status
-              <option value="select-status" disabled>
+              <option value="Default" disabled>
                 Select Status
               </option>
               <option value="alive">Alive</option>
@@ -60,7 +60,7 @@ export function FormCharacter() {
             <label htmlFor="gender-character">Gender: </label>
             <select name="gender" id="gender-character">
               Gender
-              <option value="select-gender" disabled>
+              <option value="Default" disabled>
                 Select Gender
               </option>
               <option value="male">Male</option>
