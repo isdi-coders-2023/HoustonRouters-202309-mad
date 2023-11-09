@@ -1,4 +1,4 @@
-import { Character } from '../models/character';
+import { Character } from '../../models/character';
 import { ApiCharacters } from './api.fetch';
 
 describe('Given ApiRepo class', () => {
@@ -12,7 +12,7 @@ describe('Given ApiRepo class', () => {
       });
     });
     test('Then metod  GetCharacters shoul be used', async () => {
-      const repo = new ApiCharacters(1);
+      const repo = new ApiCharacters();
       const expected: Character[] = [];
       const result = await repo.getCharacters();
       expect(jsonMock).toHaveBeenCalled();
