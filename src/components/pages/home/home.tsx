@@ -7,7 +7,6 @@ export default function HomePage() {
   return (
     <>
       <Display></Display>
-      <List></List>
       <Actions></Actions>
       <List></List>
       <ActionsList></ActionsList>
