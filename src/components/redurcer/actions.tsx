@@ -1,15 +1,21 @@
-import { Character } from '../models/character';
+import { ApiResponse } from '../../models/character';
 
-export type ActionNotesTypes = 'load' | 'create' | 'update' | 'delete';
+export type ActionNotesTypes =
+  | 'load'
+  | 'create'
+  | 'update'
+  | 'delete'
+  | 'pageNext'
+  | 'pagePrevious';
 
 type ActionCharacterAll = {
   type: 'load';
-  payload: Character[];
+  payload: ApiResponse;
 };
 
 export type ActionCharacter = ActionCharacterAll;
 
-export const loadActionCreator = (payload: Character[]): ActionCharacter => ({
+export const loadActionCreator = (payload: ApiResponse): ActionCharacter => ({
   type: 'load',
   payload,
 });

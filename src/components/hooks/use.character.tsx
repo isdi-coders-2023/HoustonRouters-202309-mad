@@ -1,45 +1,46 @@
-import {
-  SyntheticEvent,
-  useCallback,
-  useMemo,
-  useReducer,
-  useState,
-} from 'react';
-import { characterReducer } from '../redurcer/redurcer';
+import { SyntheticEvent, useCallback, useMemo, useReducer } from 'react';
+import { AppState, characterReducer } from '../redurcer/redurcer';
 import { ApiCharacters } from '../data/api.fetch';
 import { loadActionCreator } from '../redurcer/actions';
+import { Info } from '../../models/character';
 
 export function useCharacter() {
-  const [Characters, dispatch] = useReducer(characterReducer, []);
-  const [page, setPage] = useState(1);
-  const repo = useMemo(() => new ApiCharacters(page), [page]);
+  const initialState: AppState = {
+    info: {} as Info,
+    characters: [],
+  };
+
+  const [appState, dispatch] = useReducer(characterReducer, initialState);
+
+  const repo = useMemo(() => new ApiCharacters(), []);
   const loadCharacters = useCallback(async () => {
     try {
       // Asíncrona
       const loadedRepo = await repo.getCharacters();
-      const loadedCharacters = loadedRepo.results;
-      console.log(loadedCharacters);
 
       // Síncrono
-      dispatch(loadActionCreator(loadedCharacters));
+      dispatch(loadActionCreator(loadedRepo));
     } catch (error) {}
   }, [repo]);
 
-  const handleNext = (event: SyntheticEvent) => {
+  const handleNext = async (event: SyntheticEvent) => {
     event.preventDefault();
-    setPage(page + 1);
+    if (!appState.info.next) throw new Error('There are no more pages');
+    const loadedRepo = await repo.getCharacters(appState.info.next);
+    dispatch(loadActionCreator(loadedRepo));
   };
 
-  const handlePrevious = (event: SyntheticEvent) => {
+  const handlePrevious = async (event: SyntheticEvent) => {
     event.preventDefault();
-    setPage(page - 1);
+    if (!appState.info.prev) throw new Error('There are no more pages');
+    const loadedRepo = await repo.getCharacters(appState.info.prev);
+
+    dispatch(loadActionCreator(loadedRepo));
   };
 
   return {
-    Characters,
+    appState,
     loadCharacters,
-    page,
-    setPage,
     handleNext,
     handlePrevious,
   };

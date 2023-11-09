@@ -5,7 +5,7 @@ export type Gender = 'Male' | 'Female' | 'Genderless' | 'Unknown';
 export type Status = 'Alive' | 'Dead' | 'Unknown';
 
 export type Character = {
-  id: number;
+  id: string;
   name: string;
   status: Status;
   species: string;
@@ -13,9 +13,9 @@ export type Character = {
   origin: Origin;
   location: Location;
   image: string;
-  episode: string[];
+  episode?: string[];
   url: string;
-  created: string;
+  created?: string;
 };
 
 export type Info = {
@@ -25,7 +25,7 @@ export type Info = {
   prev: 'string' | null;
 };
 //FETCH ALL CHARACTERS
-export type Characters = {
+export type ApiResponse = {
   info: Info;
   results: Character[];
 };

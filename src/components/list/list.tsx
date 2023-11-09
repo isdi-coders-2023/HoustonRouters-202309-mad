@@ -5,18 +5,17 @@ import { AppContext } from '../context/app.contest';
 
 export function List() {
   const {
-    characterTools: { Characters, loadCharacters },
+    characterTools: { appState, loadCharacters },
   } = useContext(AppContext);
 
   useEffect(() => {
     loadCharacters();
   }, [loadCharacters]);
 
-  console.log(Characters);
   return (
     <section className="list">
       <ul>
-        {Characters.map((item) => (
+        {appState.characters.map((item) => (
           <Card key={item.id} character={item}></Card>
         ))}
       </ul>
