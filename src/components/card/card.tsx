@@ -16,7 +16,7 @@ export function Card({ character }: CharacterProp) {
           {character.gender}
         </span>
       </p>
-      <ButtonDetails idCharacter={character.id}></ButtonDetails>
+      <ButtonDetails idCharacter={String(character.id)}></ButtonDetails>
     </div>
   );
 }

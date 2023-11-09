@@ -27,7 +27,7 @@ describe('Given Card component', () => {
     };
 
     const character: Character = {
-      id: '1',
+      id: 1,
       name: 'Rick Sanchez',
       image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
       gender: 'Male',
