@@ -6,10 +6,9 @@ type CharacterProp = {
   character: Character;
 };
 export function Card({ character }: CharacterProp) {
-  let imagenUrl = `https://rickandmortyapi.com/api/character/avatar/${character.id}.jpeg`;
   return (
     <div className="card">
-      <img src={imagenUrl}></img>
+      <img src={character.image}></img>
       <p>
         <span>{character.name}</span>
         <span>
