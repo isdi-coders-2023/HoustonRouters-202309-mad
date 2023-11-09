@@ -4,6 +4,7 @@ import { List } from './list';
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
 
+//
 const mockContext: ContextStructure = {
   characterTools: {
     appState: {

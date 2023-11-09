@@ -8,6 +8,7 @@ import { AppContext, ContextStructure } from '../context/app.contest';
 describe('Given Details component', () => {
   // const characters = [] as unknown as Character[];
 
+  //
   const mockContext: ContextStructure = {
     characterTools: {
       appState: {
