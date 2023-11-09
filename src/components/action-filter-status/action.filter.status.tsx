@@ -2,7 +2,7 @@ import './action.filter.status.scss';
 export function ActionFilterStatus() {
   return (
     <select name="status" className="filterStatus">
-      <option selected disabled>
+      <option value="default" disabled>
         Filter by status
       </option>
       <option value="all">All</option>
