@@ -6,18 +6,19 @@ type CharacterProp = {
   character: Character;
 };
 export function Card({ character }: CharacterProp) {
-  let imagenUrl = `https://rickandmortyapi.com/api/character/avatar/${character.id}.jpeg`;
   return (
     <div className="card">
-      <img src={imagenUrl}></img>
-      <p>
+      <img src={character.image}></img>
+      <p className="character-name">
         <span>{character.name}</span>
-        <span>
-          <i className="fa-solid fa-venus-mars"></i>
-          {character.gender}
-        </span>
       </p>
-      <ButtonDetails idCharacter={character.id}></ButtonDetails>
+      <p className="more-info">
+        <span>
+          <i className="fa-solid fa-venus-mars"></i> {character.gender}
+        </span>
+        <span className={character.status}>{character.status}</span>
+      </p>
+      <ButtonDetails idCharacter={String(character.id)}></ButtonDetails>
     </div>
   );
 }

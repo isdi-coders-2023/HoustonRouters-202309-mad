@@ -13,9 +13,9 @@ export type Character = {
   origin: Origin;
   location: Location;
   image: string;
-  episode: string[];
+  episode?: string[];
   url: string;
-  created: string;
+  created?: string;
 };
 
 export type Info = {
