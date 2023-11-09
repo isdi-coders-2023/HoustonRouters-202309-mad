@@ -12,7 +12,7 @@ export function characterReducer(
 ): AppState {
   switch (type) {
     case 'load':
-      return { ...state, results: payload.results, info: payload.info };
+      return { results: payload.results, info: payload.info };
 
     default:
       return { ...state };
