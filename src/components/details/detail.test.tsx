@@ -3,20 +3,15 @@ import '@testing-library/jest-dom';
 import { Detail } from './detail';
 import { MemoryRouter as Router } from 'react-router-dom';
 import { AppContext, ContextStructure } from '../context/app.contest';
-import { Character } from '../../models/character';
+// import { Character } from '../../models/character';
 
 describe('Given Details component', () => {
-  const characters = [] as unknown as Character[];
+  // const characters = [] as unknown as Character[];
 
   const mockContext: ContextStructure = {
     characterTools: {
       appState: {
-        characters: [
-          {
-            results: { characters },
-            info: { count: 1, next: 2 },
-          },
-        ],
+        results: [{}],
       },
     },
   } as unknown as ContextStructure;

@@ -7,14 +7,9 @@ import { MemoryRouter } from 'react-router-dom';
 const mockContext: ContextStructure = {
   characterTools: {
     appState: {
-      characters: [
-        {
-          results: {},
-          info: { count: 1, next: 2 },
-        },
-      ],
+      results: [{}],
     },
-    loadCharacters: jest.fn().mockResolvedValue([]),
+    loadCharacters: jest.fn().mockResolvedValue([{}]),
   },
 } as unknown as ContextStructure;
 
