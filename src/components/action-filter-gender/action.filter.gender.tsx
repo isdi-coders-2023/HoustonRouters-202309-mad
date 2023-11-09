@@ -2,7 +2,7 @@ import './action.filter.gender.scss';
 export function ActionFilterGender() {
   return (
     <select className="filterGender">
-      <option selected disabled>
+      <option value="default" disabled>
         Filter by gender
       </option>
       <option value="all">All</option>

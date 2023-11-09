@@ -1,16 +1,39 @@
 import { screen, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Detail } from './detail';
+import { MemoryRouter as Router } from 'react-router-dom';
+import { AppContext, ContextStructure } from '../context/app.contest';
+import { Character } from '../../models/character';
 
 describe('Given Details component', () => {
-  describe('When we instantiate', () => {
-    beforeEach(() => {
-      render(<Detail></Detail>);
-    });
+  const characters = [] as unknown as Character[];
 
-    test('Then it should be in the document', () => {
-      const element = screen.getByText(/Details/i);
-      expect(element).toBeInTheDocument();
+  const mockContext: ContextStructure = {
+    characterTools: {
+      appState: {
+        characters: [
+          {
+            results: { characters },
+            info: { count: 1, next: 2 },
+          },
+        ],
+      },
+    },
+  } as unknown as ContextStructure;
+
+  beforeEach(() => {
+    render(
+      <AppContext.Provider value={mockContext}>
+        <Router>
+          <Detail />
+        </Router>
+      </AppContext.Provider>
+    );
+  });
+  describe('When we instantiate', () => {
+    test('Then it should render the character details', () => {
+      const name = screen.getByRole('img');
+      expect(name).toBeInTheDocument();
     });
   });
 });

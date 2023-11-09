@@ -9,14 +9,16 @@ export function Card({ character }: CharacterProp) {
   return (
     <div className="card">
       <img src={character.image}></img>
-      <p>
+      <p className="character-name">
         <span>{character.name}</span>
-        <span>
-          <i className="fa-solid fa-venus-mars"></i>
-          {character.gender}
-        </span>
       </p>
-      <ButtonDetails idCharacter={character.id}></ButtonDetails>
+      <p className="more-info">
+        <span>
+          <i className="fa-solid fa-venus-mars"></i> {character.gender}
+        </span>
+        <span className={character.status}>{character.status}</span>
+      </p>
+      <ButtonDetails idCharacter={String(character.id)}></ButtonDetails>
     </div>
   );
 }

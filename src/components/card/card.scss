@@ -13,9 +13,25 @@
   gap: 1rem;
   font-family: $patrick;
 
-  p {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .character-name {
+    font-size: 2rem;
+  }
+
+  .more-info {
+    span {
+      font-size: 1rem;
+      padding: 0.1rem 1.5rem;
+      border-radius: 1rem;
+    }
+
+    span.Alive {
+      background: $green;
+    }
+    span.Dead {
+      background: $red;
+    }
+    span.unknown {
+      background: $gray-dark;
+    }
   }
 }
