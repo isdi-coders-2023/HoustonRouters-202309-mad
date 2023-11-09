@@ -7,7 +7,6 @@ export function List() {
   const {
     characterTools: { appState, loadCharacters },
   } = useContext(AppContext);
-
   useEffect(() => {
     loadCharacters();
   }, [loadCharacters]);
@@ -15,7 +14,7 @@ export function List() {
   return (
     <section className="list">
       <ul>
-        {appState.characters.map((item) => (
+        {appState.results.map((item) => (
           <Card key={item.id} character={item}></Card>
         ))}
       </ul>

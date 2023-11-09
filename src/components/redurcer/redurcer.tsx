@@ -3,7 +3,7 @@ import { ActionCharacter } from './actions';
 
 export type AppState = {
   info: Info;
-  characters: Character[];
+  results: Character[];
 };
 
 export function characterReducer(
@@ -12,7 +12,7 @@ export function characterReducer(
 ): AppState {
   switch (type) {
     case 'load':
-      return { ...state, characters: payload.results, info: payload.info };
+      return { results: payload.results, info: payload.info };
 
     default:
       return { ...state };

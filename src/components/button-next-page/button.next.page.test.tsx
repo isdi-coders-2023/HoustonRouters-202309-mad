@@ -5,6 +5,7 @@ import { AppState } from '../redurcer/redurcer';
 import { AppContext, ContextStructure } from '../context/app.contest';
 import { userEvent } from '@testing-library/user-event';
 
+
 describe('Given ButtonNextPage component', () => {
   describe('When we instantiate', () => {
     const mockState: ContextStructure = {
