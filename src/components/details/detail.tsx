@@ -9,7 +9,7 @@ export function Detail() {
     characterTools: { appState },
   } = useContext(AppContext);
 
-  const characterDetails = appState.characters.find((item) => item.id === id);
+  const characterDetails = appState.results.find((item) => item.id === id);
 
   const episodes = characterDetails?.episode?.map((item) => {
     const episodeNumber = item.split('/');

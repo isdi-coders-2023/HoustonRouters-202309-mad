@@ -9,7 +9,7 @@ const mockContext: ContextStructure = {
     appState: {
       characters: [
         {
-          results: {},
+          results: [],
           info: { count: 1, next: 2 },
         },
       ],

@@ -1,3 +1,4 @@
+import { ButtonNextPage } from '../button-next-page/button.next.page';
 import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
 import { List } from '../list/list';
@@ -8,8 +9,11 @@ export function App() {
     <>
       <Header></Header>
       <List></List>
+      <ButtonNextPage></ButtonNextPage>
       <AppRoutes></AppRoutes>
       <Footer></Footer>
     </>
   );
 }
+
+export default App;
