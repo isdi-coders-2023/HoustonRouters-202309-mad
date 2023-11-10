@@ -1,7 +1,17 @@
+import { useContext } from 'react';
+import { AppContext } from '../context/app.contest';
 import './action.filter.status.scss';
 export function ActionFilterStatus() {
+  const {
+    characterTools: { handleFilterStatus },
+  } = useContext(AppContext);
+
   return (
-    <select name="status" className="filterStatus">
+    <select
+      name="status"
+      className="filterStatus"
+      onChange={handleFilterStatus}
+    >
       <option value="default" disabled>
         Filter by status
       </option>

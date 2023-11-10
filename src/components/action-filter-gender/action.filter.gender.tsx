@@ -1,7 +1,17 @@
+import { useContext } from 'react';
+import { AppContext } from '../context/app.contest';
 import './action.filter.gender.scss';
 export function ActionFilterGender() {
+  const {
+    characterTools: { handleFilterGender },
+  } = useContext(AppContext);
+
   return (
-    <select className="filterGender">
+    <select
+      name="gender"
+      className="filterGender"
+      onChange={handleFilterGender}
+    >
       <option value="default" disabled>
         Filter by gender
       </option>
