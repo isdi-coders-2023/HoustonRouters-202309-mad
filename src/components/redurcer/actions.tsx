@@ -18,7 +18,15 @@ type ActionNextPage = {
   payload: Info;
 };
 
-export type ActionCharacter = ActionCharacterAll | ActionNextPage;
+type ActionCreate = {
+  type: 'create';
+  payload: ApiResponse;
+};
+
+export type ActionCharacter =
+  | ActionCharacterAll
+  | ActionNextPage
+  | ActionCreate;
 
 export const loadActionCreator = (payload: ApiResponse): ActionCharacter => ({
   type: 'load',
@@ -27,5 +35,10 @@ export const loadActionCreator = (payload: ApiResponse): ActionCharacter => ({
 
 export const nextPageActions = (payload: Info): ActionNextPage => ({
   type: 'pageNext',
+  payload,
+});
+
+export const ActionCreate = (payload: ApiResponse): ActionCreate => ({
+  type: 'create',
   payload,
 });

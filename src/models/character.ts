@@ -11,7 +11,7 @@ export type Character = {
   species: string;
   gender: Gender;
   origin: Origin;
-  location: Location;
+  location?: Location;
   image: string;
   episode?: string[];
   url: string;
@@ -24,6 +24,22 @@ export type Info = {
   next: 'string' | null;
   prev: 'string' | null;
 };
+
+export type ApiPrivate = {
+  pages: number;
+  next: 'string' | null;
+  prev: 'string' | null;
+  id: number;
+  name: string;
+  status: Status;
+  species: string;
+  gender: Gender;
+  origin: string;
+  location: string;
+  image: string;
+  url: string;
+};
+
 //FETCH ALL CHARACTERS
 export type ApiResponse = {
   info: Info;

@@ -46,12 +46,5 @@
       "url": "https://rickandmortyapi.com/api/character/2",
       "created": "2017-11-04T18:50:21.651Z"
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
   ]
 }
