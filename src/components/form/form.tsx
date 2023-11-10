@@ -2,18 +2,6 @@
 import './form.scss';
 
 export function FormCharacter() {
-  // const [form, setForm] = useState({
-  // })
-
-  // const handleChange = (ev: SyntheticEvent) => {
-  //   return setForm(form)
-  // }
-
-  // const handleSubmit = (ev: SyntheticEvent) => {
-  //   ev.preventDefault();
-  //  return setForm(form)
-  // }
-
   return (
     <section className="form-section">
       <div>
