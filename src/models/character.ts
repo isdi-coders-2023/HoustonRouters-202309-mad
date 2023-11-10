@@ -3,6 +3,8 @@ import { Location } from './location';
 
 export type Gender = 'Male' | 'Female' | 'Genderless' | 'Unknown';
 export type Status = 'Alive' | 'Dead' | 'Unknown';
+export type PrivateGender = 'Male' | 'Female' | 'Genderless' | 'Unknown' | '';
+export type PrivateStatus = 'Alive' | 'Dead' | 'Unknown' | '';
 
 export type Character = {
   id: number;
@@ -40,8 +42,26 @@ export type ApiPrivate = {
   url: string;
 };
 
+export type PrivateCharacter = {
+  id: number;
+  name: string;
+  status: PrivateStatus;
+  species: string;
+  gender: PrivateGender;
+  origin: string;
+  location: string;
+  image: string;
+  episode?: string[];
+  url: string;
+  created?: string;
+};
+
 //FETCH ALL CHARACTERS
 export type ApiResponse = {
   info: Info;
   results: Character[];
+};
+
+export type PrivateResponse = {
+  private: PrivateCharacter[];
 };

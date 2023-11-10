@@ -13,8 +13,6 @@ export function characterReducer(
   switch (type) {
     case 'load':
       return { ...state, results: payload.results, info: payload.info };
-    case 'create':
-      return { ...state, results: payload.results };
 
     default:
       return { ...state };
