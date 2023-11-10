@@ -11,7 +11,7 @@ export type Character = {
   species: string;
   gender: Gender;
   origin: Origin;
-  location?: Location;
+  location: Location;
   image: string;
   episode?: string[];
   url: string;
