@@ -9,11 +9,9 @@ describe('Given DetailPage component', () => {
   describe('When we instantiate', () => {
     beforeEach(() => {
       render(
-        <>
-          <Router>
-            <DetailPage></DetailPage>
-          </Router>
-        </>
+        <Router>
+          <DetailPage></DetailPage>
+        </Router>
       );
     });
     test('renders Detail-page with Detail component', () => {
