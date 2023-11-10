@@ -6,6 +6,9 @@ const ErroPage = lazy(() => import('../pages/error-page/error.page'));
 const MyUniversePage = lazy(() => import('../pages/my-universe/my.universe'));
 const AddFormPage = lazy(() => import('../pages/add-form-page/add.form.page'));
 const DetailPage = lazy(() => import('../pages/details-page/detail.page'));
+const EditFormPage = lazy(
+  () => import('../pages/edit-form-page/edit.form.page')
+);
 
 export function AppRoutes() {
   return (
@@ -18,6 +21,7 @@ export function AppRoutes() {
           element={<MyUniversePage></MyUniversePage>}
         ></Route>
         <Route path="/add" element={<AddFormPage></AddFormPage>}></Route>
+        <Route path="/edit/:id" element={<EditFormPage></EditFormPage>}></Route>
         <Route path="/details/:id" element={<DetailPage></DetailPage>}></Route>
         <Route path="*" element={<ErroPage></ErroPage>}></Route>
       </Routes>
