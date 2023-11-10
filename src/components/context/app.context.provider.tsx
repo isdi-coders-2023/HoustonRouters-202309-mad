@@ -9,7 +9,6 @@ export function AppContextProvider({ children }: Props) {
   const charactersState = useCharacter();
   const context: ContextStructure = {
     characterTools: charactersState,
-    appState: undefined,
   };
   return <AppContext.Provider value={context}>{children}</AppContext.Provider>;
 }
