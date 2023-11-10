@@ -3,7 +3,7 @@ import { Character } from '../../models/character';
 export class ApiUniverse {
   serverUrl: string;
   constructor() {
-    this.serverUrl = 'http://localhost:3000/MyUniverse';
+    this.serverUrl = 'http://localhost:3000/universe';
   }
 
   async getAllPrivate(): Promise<Character[]> {
