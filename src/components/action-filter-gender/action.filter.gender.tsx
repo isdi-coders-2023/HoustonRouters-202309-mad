@@ -1,18 +1,29 @@
-import { useContext } from 'react';
+import { SyntheticEvent, useContext } from 'react';
 import { AppContext } from '../context/app.contest';
 import './action.filter.gender.scss';
 export function ActionFilterGender() {
   const {
-    characterTools: { handleFilterGender },
+    characterTools: { loadCharacters, handleFilterGender },
   } = useContext(AppContext);
+
+  const handleFilterSelectGender = (event: SyntheticEvent) => {
+    const filterElementGender = event.target as HTMLSelectElement;
+    if (!filterElementGender) throw new Error('No data to filter');
+
+    if (filterElementGender.value === 'all') {
+      loadCharacters();
+    } else {
+      handleFilterGender(filterElementGender.value as string);
+    }
+  };
 
   return (
     <select
       name="gender"
       className="filterGender"
-      onChange={handleFilterGender}
+      onChange={handleFilterSelectGender}
     >
-      <option value="default" disabled>
+      <option selected value="default" disabled>
         Filter by gender
       </option>
       <option value="all">All</option>

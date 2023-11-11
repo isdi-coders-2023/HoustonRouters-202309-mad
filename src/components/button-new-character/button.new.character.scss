@@ -1,9 +1,24 @@
 @import '../../vars';
 
-.button-new-character {
-  width: 14.5rem;
-  height: 2.3rem;
-  border-radius: 0.62rem;
-  font-family: $patrick;
-  margin-top: 1rem;
+.action-new-character {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+
+  .link-new-character {
+    background: #d9d9d9;
+    width: 14rem;
+    border-radius: 1rem;
+    color: #000000;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
+    font-family: $patrick;
+    padding: 0.6rem;
+  }
 }

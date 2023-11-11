@@ -38,38 +38,18 @@ export function useCharacter() {
     dispatch(loadActionCreator(loadedRepo));
   };
 
-  const handleFilterStatus = async (event: SyntheticEvent) => {
-    const filterElementStatus = event.target as HTMLSelectElement;
-    let urlValueStatus: string = '';
-    if (!filterElementStatus) throw new Error('There are no more pages');
-
-    if (filterElementStatus.value === 'all') {
-      urlValueStatus = 'https://rickandmortyapi.com/api/character/';
-    } else {
-      urlValueStatus =
-        'https://rickandmortyapi.com/api/character/?status=' +
-        filterElementStatus.value;
-    }
-
-    const loadedRepo = await repo.getCharacters(urlValueStatus);
+  const handleFilterGender = async (filterValue: string) => {
+    const urlFilter =
+      'https://rickandmortyapi.com/api/character/?gender=' + filterValue;
+    const loadedRepo = await repo.getCharacters(urlFilter);
 
     dispatch(loadActionCreator(loadedRepo));
   };
 
-  const handleFilterGender = async (event: SyntheticEvent) => {
-    const filterElementGender = event.target as HTMLSelectElement;
-    let urlValueGender: string = '';
-    if (!filterElementGender) throw new Error('There are no more pages');
-
-    if (filterElementGender.value === 'all') {
-      urlValueGender = 'https://rickandmortyapi.com/api/character/';
-    } else {
-      urlValueGender =
-        'https://rickandmortyapi.com/api/character/?gender=' +
-        filterElementGender.value;
-    }
-
-    const loadedRepo = await repo.getCharacters(urlValueGender);
+  const handleFilterStatus = async (filterValue: string) => {
+    const urlFilter =
+      'https://rickandmortyapi.com/api/character/?status=' + filterValue;
+    const loadedRepo = await repo.getCharacters(urlFilter);
 
     dispatch(loadActionCreator(loadedRepo));
   };
