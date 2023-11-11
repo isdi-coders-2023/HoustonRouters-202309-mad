@@ -32,7 +32,7 @@ export function privateCharacterReducer(
     case 'loadPrivate':
       console.log('LOAD:');
       console.log(payload);
-      return { ...privateState, results: payload.results };
+      return { ...privateState, results: payload };
 
     default:
       return { ...privateState };
