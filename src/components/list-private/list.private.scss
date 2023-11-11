@@ -1,0 +1,13 @@
+@import '../../vars';
+
+.list {
+  margin-bottom: 1rem;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}

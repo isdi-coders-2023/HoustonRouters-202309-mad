@@ -1,17 +1,14 @@
-import { ApiResponse, Info, PrivateResponse } from '../../models/character';
-
-export type ActionPrivateTypes = 'create';
-
-export type ActionNotesTypes =
-  | 'load'
-  | 'update'
-  | 'delete'
-  | 'pageNext'
-  | 'pagePrevious';
+import { ApiResponse, Info } from '../../models/character';
+import { ApiPrivateResponse } from '../../models/private.character';
 
 type ActionCharacterAll = {
   type: 'load';
   payload: ApiResponse;
+};
+
+type ActionPrivateCharacterAll = {
+  type: 'loadPrivate';
+  payload: ApiPrivateResponse;
 };
 
 type ActionNextPage = {
@@ -19,28 +16,23 @@ type ActionNextPage = {
   payload: Info;
 };
 
-type ActionCreate = {
-  type: 'create';
-  payload: PrivateResponse;
-};
-
 export type ActionCharacter = ActionCharacterAll | ActionNextPage;
 
-export type ActionsPrivate = ActionCreate;
+export type ActionPrivateCharacter = ActionPrivateCharacterAll;
 
 export const loadActionCreator = (payload: ApiResponse): ActionCharacter => ({
   type: 'load',
   payload,
 });
 
-export const nextPageActions = (payload: Info): ActionNextPage => ({
-  type: 'pageNext',
+export const loadActionPrivateCreator = (
+  payload: ApiPrivateResponse
+): ActionPrivateCharacter => ({
+  type: 'loadPrivate',
   payload,
 });
 
-export const createPrivateCharacter = (
-  payload: PrivateResponse
-): ActionCreate => ({
-  type: 'create',
+export const nextPageActions = (payload: Info): ActionNextPage => ({
+  type: 'pageNext',
   payload,
 });

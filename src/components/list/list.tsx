@@ -7,6 +7,7 @@ export function List() {
   const {
     characterTools: { appState, loadCharacters },
   } = useContext(AppContext);
+
   useEffect(() => {
     loadCharacters();
   }, [loadCharacters]);
