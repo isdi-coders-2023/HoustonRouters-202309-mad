@@ -29,6 +29,9 @@ describe('Given the ApiRepo ', () => {
         handleFilterGender,
       } = useCharacter();
 
+      const mockFilterGender = 'Male';
+      const mockFilterStatus = 'Alive';
+
       useEffect(() => {
         loadCharacters();
       }, [loadCharacters]);
@@ -39,8 +42,13 @@ describe('Given the ApiRepo ', () => {
           <button onClick={loadCharacters}> Load</button>
           <button onClick={handleNext}> next</button>
           <button onClick={handlePrevious}> Previous</button>
-          <button onClick={handleFilterStatus}> Status </button>
-          {<button onClick={handleFilterGender}>Gender </button>}
+          <button onClick={() => handleFilterStatus(mockFilterStatus)}>
+            {' '}
+            Status{' '}
+          </button>
+          <button onClick={() => handleFilterGender(mockFilterGender)}>
+            Gender{' '}
+          </button>
         </>
       );
     };
@@ -100,7 +108,7 @@ describe('Given the ApiRepo ', () => {
         results: [{}],
       } as unknown as AppState;
 
-      const filterStatus = screen.getByText('Status');
+      const filterStatus = screen.getByRole('button', { name: 'Status' });
       expect(filterStatus).toBeInTheDocument();
       await userEvent.click(filterStatus);
       expect(useReducer(reducer, mockInitialState)[1]).toHaveBeenCalled();
@@ -115,21 +123,7 @@ describe('Given the ApiRepo ', () => {
         results: [{}],
       } as unknown as AppState;
 
-      const filterStatus = screen.getByText('Gender');
-      expect(filterStatus).toBeInTheDocument();
-      await userEvent.click(filterStatus);
-      expect(useReducer(reducer, mockInitialState)[1]).toHaveBeenCalled;
-    });
-    test('Then the filter by Gender should be executed', async () => {
-      let reducer;
-      reducer = jest.fn();
-
-      const mockInitialState: AppState = {
-        info: { pages: 1 },
-        results: [{}],
-      } as unknown as AppState;
-
-      const filterStatus = screen.getByText('Gender');
+      const filterStatus = screen.getByRole('button', { name: 'Gender' });
       expect(filterStatus).toBeInTheDocument();
       await userEvent.click(filterStatus);
       expect(useReducer(reducer, mockInitialState)[1]).toHaveBeenCalled;
