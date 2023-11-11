@@ -13,7 +13,7 @@ export function ActionFilterGender() {
     if (filterElementGender.value === 'all') {
       loadCharacters();
     } else {
-      handleFilterGender(filterElementGender.value as string);
+      handleFilterGender(filterElementGender.value);
     }
   };
 

@@ -13,7 +13,7 @@ export function ActionFilterStatus() {
     if (filterElementStatus.value === 'all') {
       loadCharacters();
     } else {
-      handleFilterStatus(filterElementStatus.value as string);
+      handleFilterStatus(filterElementStatus.value);
     }
   };
 
