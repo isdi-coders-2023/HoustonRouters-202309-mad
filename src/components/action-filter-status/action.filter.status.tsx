@@ -1,18 +1,29 @@
-import { useContext } from 'react';
+import { SyntheticEvent, useContext } from 'react';
 import { AppContext } from '../context/app.contest';
 import './action.filter.status.scss';
 export function ActionFilterStatus() {
   const {
-    characterTools: { handleFilterStatus },
+    characterTools: { loadCharacters, handleFilterStatus },
   } = useContext(AppContext);
+
+  const handleFilterSelectStatus = (event: SyntheticEvent) => {
+    const filterElementStatus = event.target as HTMLSelectElement;
+    if (!filterElementStatus) throw new Error('No data to filter');
+
+    if (filterElementStatus.value === 'all') {
+      loadCharacters();
+    } else {
+      handleFilterStatus(filterElementStatus.value as string);
+    }
+  };
 
   return (
     <select
       name="status"
       className="filterStatus"
-      onChange={handleFilterStatus}
+      onChange={handleFilterSelectStatus}
     >
-      <option value="default" disabled>
+      <option selected value="default" disabled>
         Filter by status
       </option>
       <option value="all">All</option>
