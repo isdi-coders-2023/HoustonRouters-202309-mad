@@ -20,7 +20,7 @@ header {
     gap: 1rem;
   }
 
-  ul {
+  .menu {
     display: flex;
     list-style: none;
     gap: 1rem;
@@ -32,7 +32,8 @@ header {
       }
     }
   }
-  .fa-bars {
+  .fa-bars,
+  .menu-mobile {
     display: none;
   }
 }
@@ -45,13 +46,40 @@ header {
       }
     }
 
-    ul {
+    .menu {
       display: none;
     }
 
     .fa-bars {
       display: block;
       cursor: pointer;
+    }
+
+    .menu-mobile.active {
+      position: absolute;
+      text-decoration: none;
+      list-style: none;
+      top: 65px;
+      background: black;
+      width: 91.5%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: -1rem;
+
+      li {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid $white;
+        padding: 0.3rem;
+
+        a {
+          text-decoration: none;
+          color: $white;
+        }
+      }
     }
   }
 }

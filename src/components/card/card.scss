@@ -22,6 +22,7 @@
       font-size: 1rem;
       padding: 0.1rem 1.5rem;
       border-radius: 1rem;
+      text-align: center;
     }
 
     span.Alive {
@@ -32,6 +33,16 @@
     }
     span.unknown {
       background: $gray-dark;
+    }
+  }
+}
+
+@media (max-width: 240px) {
+  .card {
+    .more-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
   }
 }

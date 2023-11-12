@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
   font-family: $patrick;
 
@@ -12,5 +11,13 @@
     padding: 0.5rem;
     border-radius: 1rem;
     width: 10rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .action-list {
+    ul {
+      justify-content: center;
+    }
   }
 }
