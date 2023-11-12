@@ -1,26 +1,27 @@
 //import { PrivateCharacter } from '../../models/private.character';
+import { PrivateCharacter } from '../../models/private.character';
 import { ApiPrivateCharacters } from './api.private.fetch';
 
-// describe('Given ApiPrivateCharacters class', () => {
-//   describe('When we instantiate it and response is ok', () => {
-//     let jsonMock: jest.Mock;
-//     beforeEach(() => {
-//       jsonMock = jest.fn().mockResolvedValueOnce({ results: [] });
-//       global.fetch = jest.fn().mockResolvedValueOnce({
-//         ok: true,
-//         json: jsonMock,
-//       });
-//     });
+describe('Given ApiPrivateCharacters class', () => {
+  describe('When we instantiate it and response is ok', () => {
+    let jsonMock: jest.Mock;
+    beforeEach(() => {
+      jsonMock = jest.fn().mockResolvedValueOnce([]);
+      global.fetch = jest.fn().mockResolvedValueOnce({
+        ok: true,
+        json: jsonMock,
+      });
+    });
 
-//     test('Then method GetAllPrivate should be used', async () => {
-//       const repo = new ApiPrivateCharacters();
-//       const expected: PrivateCharacter[] = [];
-//       const result = await repo.getCharacters();
-//       expect(jsonMock).toHaveBeenCalled();
-//       expect(result).toStrictEqual(expected);
-//     });
-//   });
-// });
+    test('Then method GetAllPrivate should be used', async () => {
+      const repo = new ApiPrivateCharacters();
+      const expected: PrivateCharacter[] = [];
+      const result = await repo.getCharacters();
+      expect(jsonMock).toHaveBeenCalled();
+      expect(result).toStrictEqual(expected);
+    });
+  });
+});
 
 describe('When we instantiate it and response is bad', () => {
   beforeEach(() => {
