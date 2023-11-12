@@ -27,41 +27,8 @@ export type Info = {
   prev: 'string' | null;
 };
 
-export type ApiPrivate = {
-  pages: number;
-  next: 'string' | null;
-  prev: 'string' | null;
-  id: number;
-  name: string;
-  status: Status;
-  species: string;
-  gender: Gender;
-  origin: string;
-  location: string;
-  image: string;
-  url: string;
-};
-
-export type PrivateCharacter = {
-  id: number;
-  name: string;
-  status: PrivateStatus;
-  species: string;
-  gender: PrivateGender;
-  origin: string;
-  location: string;
-  image: string;
-  episode?: string[];
-  url: string;
-  created?: string;
-};
-
 //FETCH ALL CHARACTERS
 export type ApiResponse = {
   info: Info;
   results: Character[];
-};
-
-export type PrivateResponse = {
-  private: PrivateCharacter[];
 };
