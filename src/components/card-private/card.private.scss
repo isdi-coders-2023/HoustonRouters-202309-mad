@@ -35,6 +35,21 @@
       background: $gray-dark;
     }
   }
+
+  .button-edit,
+  .button-delete {
+    background: #d9d9d9;
+    width: 100%;
+    border-radius: 1rem;
+    color: #000000;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 240px) {
