@@ -3,3 +3,9 @@
   padding: 0.6rem;
   border-radius: 1rem;
 }
+
+@media (max-width: 330px) {
+  .filterGender {
+    width: 100%;
+  }
+}

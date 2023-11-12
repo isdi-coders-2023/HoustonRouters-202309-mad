@@ -11,3 +11,15 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 650px) {
+  .list {
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}

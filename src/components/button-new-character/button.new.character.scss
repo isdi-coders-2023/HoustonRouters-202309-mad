@@ -22,3 +22,15 @@
     padding: 0.6rem;
   }
 }
+
+@media (max-width: 780px) {
+  .link-new-character {
+    width: 100%;
+  }
+}
+
+@media (max-width: 260px) {
+  .link-new-character {
+    font-size: 0.8rem;
+  }
+}
