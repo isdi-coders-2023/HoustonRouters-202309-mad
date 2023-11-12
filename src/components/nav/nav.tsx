@@ -14,7 +14,7 @@ export function Nav() {
 
   return (
     <>
-      <ul className="menu">
+      <ul className="menu" role="menu-desktop">
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -22,10 +22,14 @@ export function Nav() {
           <Link to="/my-universe">My universe</Link>
         </li>
       </ul>
-      <i className="fa-solid fa-bars" onClick={handleBurgerNavClick}></i>
-      <ul className="menu-mobile">
+      <i
+        className="fa-solid fa-bars"
+        role="i"
+        onClick={handleBurgerNavClick}
+      ></i>
+      <ul className="menu-mobile" role="menu-mobile">
         <li>
-          <Link to="/" onClick={handleLinkClick}>
+          <Link to="/" role="link-home" onClick={handleLinkClick}>
             Home
           </Link>
         </li>
