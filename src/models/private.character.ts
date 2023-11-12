@@ -15,6 +15,4 @@ export type PrivateCharacter = {
   created: string;
 };
 
-export type ApiPrivateResponse = {
-  results: PrivateCharacter[];
-};
+export type ApiPrivateResponse = PrivateCharacter[];
