@@ -1,5 +1,7 @@
 import { Info } from '../../models/character';
-import { characterReducer } from './redurcer';
+import { PrivateCharacter } from '../../models/private.character';
+
+import { characterReducer, privateCharacterReducer } from './redurcer';
 
 describe('when reducer', () => {
   test('should load correctly', () => {
@@ -48,5 +50,21 @@ describe('when reducer', () => {
       }
     );
     expect(newState).toMatchObject(mockPayload);
+  });
+
+  test('should load the private api correctly', () => {
+    const mockPayload = {
+      results: {},
+    };
+    const newState = privateCharacterReducer(
+      {
+        results: [],
+      },
+      {
+        type: 'loadPrivate',
+        payload: {} as unknown as PrivateCharacter[],
+      }
+    );
+    expect(newState).toEqual(mockPayload);
   });
 });
