@@ -123,9 +123,9 @@ describe('Given the ApiRepo ', () => {
         results: [{}],
       } as unknown as AppState;
 
-      const filterStatus = screen.getByRole('button', { name: 'Gender' });
-      expect(filterStatus).toBeInTheDocument();
-      await userEvent.click(filterStatus);
+      const filterGender = screen.getByRole('button', { name: 'Gender' });
+      expect(filterGender).toBeInTheDocument();
+      await userEvent.click(filterGender);
       expect(useReducer(reducer, mockInitialState)[1]).toHaveBeenCalled;
     });
   });
